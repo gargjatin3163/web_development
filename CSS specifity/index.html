@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: aqua;
+        }
+        h1.yellow{      /*specifity increase*/
+            color: yellow;
+        }
+        .cred{
+            color: red;
+        }
+        .cpurple{
+            color: purple;
+        }
+        [data-x=a]{    /*attribute selector*/
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="yellow cred cpurple" data-x="a">CSS Specifity</h1>
+</body>
+</html>
+<!-- inline selector>ID selector>Class or Attribute selector>Element selector>Universal selector -->

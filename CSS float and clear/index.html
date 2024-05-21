@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS float and clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+        }
+        img{
+            float: right;
+        }
+        .card{
+            border: 2px solid red;
+        }
+        .card:nth-child(3){
+            background-color:aqua;
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" width="230">
+        <div class="card">
+            <p>Lorem ipsum dolor si Nisi non tempore sint? Int velit iure deserunt quae dolorum q</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis harum corrupti eligendi? Repudiandae cumque voluptatem dicta accusamus incidunt cupiditate officia labore facere molestiae. Cumque porro commodi asperiores quaerat possimus tenetur? Cum, cumque tempore.</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores porro, voluptatibus excepturi inventore similique repudiandae velit vitae aliquam provident soluta modi illo, quibusdam ut doloribus reprehenderit eos aperiam asperiores nostrum adipisci possimus non. Illo, enim.</p>
+        </div>
+    </div>
+</body>
+</html>

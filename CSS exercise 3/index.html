@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS card design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: grey;
+            padding: 100px;
+        }
+        .card{
+            background-color: white;
+            width: 198px;
+            height: 344px;
+            border-radius: 7px;
+            padding: 0 0 34px 0; 
+        }
+        .image{
+            padding: 5px;
+        }
+        .image img{
+            border-radius: 7px;
+        }
+        .content{
+            padding: 7px 13px;
+            font-family: sans-serif;
+        }
+        .content p{
+            font-size: 13px;
+            color: gray;
+        }
+        .capsules{
+            padding: 0 28px 0 14px;
+        }
+        .capsules span{
+            border: 1px solid gray;
+            padding: 0px 6px;
+            border-radius: 7px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .button{
+            text-align: center;
+        }
+        .button button{
+            padding: 4px 7px;
+            border-radius: 9px;
+            background-color: lightblue;
+            color: blue;
+            font-size: 10px;
+            margin-top: 7px;
+            border: none;
+            cursor: pointer;
+        }
+        .button button:hover{
+            background-color: rgb(147,199,245);
+            color: rgb(129,185,170);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img width=188px src="https://img.freepik.com/free-photo/sailing-yacht-gliding-blue-waves-smoothly-generative-ai_188544-8058.jpg" alt="">
+        </div>
+        <div class="capsules">
+            <span>Nature</span>
+            <span>Lake</span>
+        </div>
+        <div class="content">
+            <h2>About Me</h2>
+            <p>kya hi likhna chhdodo......boht lmbi kahani h kbhi fir btayenge</p>
+        </div>
+        <div class="button">
+            <button >Read more</button>
+        </div>
+    </div>
+</body>
+</html>
