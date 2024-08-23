@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="display: flex;" data-createdby="harry" data-conceptby="rohan">Hey I am a box</div>
+        <div class="box">Hey i am a box</div>
+        <script>
+            // let div=document.createElement("div");
+            // div.innerHTML="I have been inserted by <b>by harry</b>";
+            // div.setAttribute("class","created");
+            // // document.querySelector(".container").append(div);
+            // document.querySelector(".container").before(div);
+            let cont=document.querySelector(".container")
+            cont.insertAdjacentHTML("afterend","<b> I am under the water</b>");
+        </script>
+    </div>
+</body>
+</html>

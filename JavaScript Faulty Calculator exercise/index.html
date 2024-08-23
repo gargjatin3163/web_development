@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faulty Calculator</title>
+</head>
+<body>
+    <h1>Faulty Calculator</h1>
+    <form id="calculator">
+        <label for="numberA">Enter number a:</label>
+        <input type="number" id="numberA" name="numberA"><br><br>
+        <label for="numberB">Enter number b:</label>
+        <input type="number" id="numberB" name="numberB"><br><br>
+        <label for="operation">Choose an operation:</label>
+        <select id="operation" name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select><br><br>
+        <button type="button" onclick="performCalculation()">Calculate</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function performCalculation() {
+            // Get input values
+            var a = parseFloat(document.getElementById('numberA').value);
+            var b = parseFloat(document.getElementById('numberB').value);
+            var operation = document.getElementById('operation').value;
+
+            // Check if inputs are valid numbers
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById('result').innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            // Calculate result with a chance of being incorrect
+            var correctResult;
+            var faultyResult;
+            var isFaulty = Math.random() < 0.3; // 30% chance of being incorrect
+
+            switch (operation) {
+                case 'add':
+                    correctResult = a + b;
+                    faultyResult = correctResult + (Math.random() * 10 - 5); // Random error between -5 and 5
+                    break;
+                case 'subtract':
+                    correctResult = a - b;
+                    faultyResult = correctResult + (Math.random() * 10 - 5); // Random error between -5 and 5
+                    break;
+                case 'multiply':
+                    correctResult = a * b;
+                    faultyResult = correctResult * (Math.random() * 0.4 + 0.8); // Random error between 80% and 120%
+                    break;
+                case 'divide':
+                    if (b === 0) {
+                        document.getElementById('result').innerText = "Cannot divide by zero.";
+                        return;
+                    }
+                    correctResult = a / b;
+                    faultyResult = correctResult * (Math.random() * 0.4 + 0.8); // Random error between 80% and 120%
+                    break;
+                default:
+                    document.getElementById('result').innerText = "Invalid operation.";
+                    return;
+            }
+
+            var result = isFaulty ? faultyResult : correctResult;
+            document.getElementById('result').innerText = "Result: " + result.toFixed(2);
+        }
+    </script>
+</body>
+</html>
